@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briksy - Our Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1807ff;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: #007BFF;
+        }
+
+        .page-hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .page-hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .page-hero p {
+            font-size: 18px;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-section {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            box-shadow: 10px 14px black;
+        }
+
+        .service-card-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #007BFF;
+
+        }
+
+        .service-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #b0b0b0;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            background-color: #1e1e1e;
+            border-top: 1px solid #333;
+        }
+
+        .footer p {
+            color: #888;
+        }
+
+
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+              
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+            .nav-links li {
+                margin: 0 10px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+               
+            }
+
+            .page-hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">Briksy</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="container">
+                <h2>How We Help You</h2>
+                <p>
+                    Briksy is built to make renting simple, transparent, and
+                    brokerage-free.
+                </p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <h3 class="section-heading">Our Core Services</h3>
+
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-card-icon">✓</div>
+                        <h4>0% Brokerage Guarantee</h4>
+                        <p>
+                            We connect you directly with property owners.
+                            That's it. No middlemen, no hidden fees, and
+                            absolutely no brokerage paid.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-icon">★</div>
+                        <h4>Verified Listings</h4>
+                        <p>
+                            Every single property on Briksy is personally
+                            verified by our team for accuracy, quality, and
+                            availability. What you see is what you get.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-card-icon">@</div>
+                        <h4>Direct Owner Contact</h4>
+                        <p>
+                            Forget endless calls with agents. Shortlist a
+                            home you love and get the owner's contact details
+                            instantly. Schedule visits at your convenience.
+                        </p>
+                    </div>
+
+
+                    <div class="service-card">
+                        <div class="service-card-icon">✎</div>
+                        <h4>Online Rent Agreements</h4>
+                        <p>
+                            Once you've found your home, we help you create
+                            and e-sign a legally valid rental agreement, all
+                            from the comfort of your couch.
+                        </p>
+                    </div>
+
+
+                    <div class="service-card">
+                        <div class="service-card-icon">⌂</div>
+                        <h4>Post Your Property</h4>
+                        <p>
+                            Are you an owner? List your property for free
+                            and get connected with genuine, verified tenants
+                            in just a few easy steps.
+                        </p>
+                    </div>
+
+
+                    <div class="service-card">
+                        <div class="service-card-icon">?</div>
+                        <h4>24/7 Support</h4>
+                        <p>
+                            Got a question? Our support team is always
+                            available to help you with any part of your
+                            home-finding journey.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Briksy. All rights reserved. Find your home without the fees.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briksy - Find Your Home, No Brokerage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+
+  
+        .header {
+            background-color: #1e1e1e; 
+            padding: 20px 0;
+            border-bottom: 1px solid #333; 
+            
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
+
+        .logo {
+
+            font-size: 28px;
+            font-weight: bold;
+            color:#1807ff;
+    
+        }
+
+        .nav-links {
+            list-style: none; 
+            
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 30px; 
+        }
+
+        .nav-links a {
+            text-decoration: none; 
+            color: #e0e0e0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+      
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: #007BFF; 
+        }
+
+ 
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+        .featured-properties {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 30px;
+        }
+
+
+        .property-card {
+            background-color: #2a2a2a; 
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 10px 14px black;
+        }
+        
+ 
+        .property-image-placeholder {
+            height: 220px;
+            background-color: #444; 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-style: italic;
+        }
+
+        .property-info {
+            padding: 25px;
+        }
+
+        .property-info h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .property-info .location {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .property-info .features {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .property-info .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #009BFF; 
+            margin-bottom: 20px;
+        }
+
+        .btn-details {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #007BFF, #6F00FF);
+            box-shadow: 5px 7px black;
+        }
+
+        .btn-details:hover {
+            opacity: 0.85; 
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            background-color: #1e1e1e;
+            border-top: 1px solid #333;
+        }
+
+        .footer p {
+            color: #888;
+        }
+
+
+        @media (max-width: 992px) {
+            .property-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+            .nav-links li {
+                margin: 0 10px; 
+            }
+
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">Briksy</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Your Next Home is Here. No Brokerage.</h2>
+                <p>
+                    Welcome to Briksy. We connect you directly with owners, 
+                    saving you thousands in brokerage fees. Find, visit, and 
+                    rent your perfect home, hassle-free.
+                </p>
+            </div>
+        </section>
+        <section class="featured-properties">
+            <div class="container">
+                <h3 class="section-heading">Featured Properties</h3>
+                <div class="property-grid">
+
+                    <!-- PROPERTY CARD 1 -->
+                    <!-- To add more, just copy this 'property-card' block -->
+                    <div class="property-card">
+                        <!-- 
+                            This is the placeholder for your image.
+                            You can add an image by adding a style tag like:
+                            style="background-image: url('path/to/your/image.jpg');"
+                        -->
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/559741199.jpg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Spacious 2BHK Apartment</h4>
+                            <p class="location">Indiranagar, Bengaluru</p>
+                            <p class="features">2 Beds • 2 Baths • 1,200 sqft</p>
+                            <p class="price">₹25,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- PROPERTY CARD 2 -->
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" height="100%" src="/images/download-8.jpeg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Modern 3BHK Villa</h4>
+                            <p class="location">Hitech City, Hyderabad</p>
+                            <p class="features">3 Beds • 3 Baths • 2,000 sqft</p>
+                            <p class="price">₹45,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- PROPERTY CARD 3 -->
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/_MG_8716.jpg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Cozy 1BHK Studio</h4>
+                            <p class="location">Powai, Mumbai</p>
+                            <p class="features">1 Bed • 1 Bath • 650 sqft</p>
+                            <p class="price">₹30,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Briksy. All rights reserved. Find your home without the fees.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briksy - All Properties</title>
+
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        
+        .header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color:#1807ff;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: #007BFF;
+        }
+
+
+        .search-section {
+            padding: 40px 0 20px 0;
+            background-color: #1e1e1e;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        
+        .search-container {
+            display: flex; 
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .search-container input[type="text"] {
+            flex-grow: 1; 
+            padding: 15px;
+            border: 1px solid #444;
+            border-radius: 5px 0 0 5px; 
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            font-size: 16px;
+            outline: none; 
+            box-shadow: 5px 7px black;
+        }
+
+        .search-container button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 0 5px 5px 0; 
+            background: linear-gradient(45deg, #007BFF, #6F00FF);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 5px 7px black;
+        }
+        
+        .search-container button:hover {
+            opacity: 0.85;
+        }
+
+
+       
+        .all-properties {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 30px;
+        }
+
+    
+        .property-card {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 10px 14px black;
+        }
+        
+        .property-image-placeholder {
+            height: 220px;
+            background-color: #444;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-style: italic;
+        }
+
+        .property-info {
+            padding: 25px;
+        }
+
+        .property-info h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .property-info .location {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 15px;
+        }
+
+        .property-info .features {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .property-info .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #009BFF;
+            margin-bottom: 20px;
+        }
+
+        .btn-details {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #007BFF, #6F00FF);
+        }
+
+        .btn-details:hover {
+            opacity: 0.85;
+        }
+
+    
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            background-color: #1e1e1e;
+            border-top: 1px solid #333;
+        }
+
+        .footer p {
+            color: #888;
+        }
+
+    
+        
+        @media (max-width: 992px) {
+            .property-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+            }
+
+            .nav-links li {
+                margin: 0 10px;
+            }
+
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-container {
+                flex-direction: column; 
+            }
+            .search-container input[type="text"] {
+                border-radius: 5px; 
+                margin-bottom: 10px;
+            }
+            .search-container button {
+                border-radius: 5px; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">Briksy</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="properties.html" class="active">Properties</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" placeholder="Search by location, property type, or keyword...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-properties">
+            <div class="container">
+                <h3 class="section-heading">Browse All Properties</h3>
+
+                <div class="property-grid">
+
+
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/559741199.jpg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Spacious 2BHK Apartment</h4>
+                            <p class="location">Indiranagar, Bengaluru</p>
+                            <p class="features">2 Beds • 2 Baths • 1,200 sqft</p>
+                            <p class="price">₹25,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+ 
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" height="100%" src="/images/download-8.jpeg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Modern 3BHK Villa</h4>
+                            <p class="location">Hitech City, Hyderabad</p>
+                            <p class="features">3 Beds • 3 Baths • 2,000 sqft</p>
+                            <p class="price">₹45,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/_MG_8716.jpg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Cozy 1BHK Studio</h4>
+                            <p class="location">Powai, Mumbai</p>
+                            <p class="features">1 Bed • 1 Bath • 650 sqft</p>
+                            <p class="price">₹30,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/pg33497-o-2a4dfe1d-b579-4b7d-937b-71a88672b6e2.avif" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Furnished 1RK Studio</h4>
+                            <p class="location">Koregaon Park, Pune</p>
+                            <p class="features">1 Bed • 1 Bath • 450 sqft</p>
+                            <p class="price">₹18,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/3-0167-1.jpg" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Luxury 4BHK Penthouse</h4>
+                            <p class="location">Juhu, Mumbai</p>
+                            <p class="features">4 Beds • 5 Baths • 3,500 sqft</p>
+                            <p class="price">₹1,50,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+                    <div class="property-card">
+                        <div class="property-image-placeholder">
+                            <img width="100%" src="/images/1787106488.webp" alt="">
+                        </div>
+                        <div class="property-info">
+                            <h4>Gated Community 2BHK</h4>
+                            <p class="location">OMR, Chennai</p>
+                            <p class="features">2 Beds • 2 Baths • 1,100 sqft</p>
+                            <p class="price">₹22,000 / month</p>
+                            <a href="#" class="btn-details">View Details</a>
+                        </div>
+                    </div>
+
+                </div> 
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Briksy. All rights reserved. Find your home without the fees.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

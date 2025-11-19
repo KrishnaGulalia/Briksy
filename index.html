@@ -64,7 +64,10 @@
 
         .logo:after {
             content: "";
-            animation: change 5s linear infinite;
+            animation: change 6s linear infinite;
+        }
+        .logo:hover::after{
+            animation-play-state: paused;
         }
 
         @keyframes change {

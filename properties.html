@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Briksy - All Properties</title>
 
     <style>
-    
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +26,7 @@
             margin: 0 auto;
         }
 
-        
+
         .header {
             background-color: #1e1e1e;
             padding: 20px 0;
@@ -40,15 +40,55 @@
         }
 
         .logo {
+
             font-size: 28px;
             font-weight: bold;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            cursor: pointer;
+
+
         }
+
+        .logo:after {
+            content: "";
+            animation: change 5s linear infinite;
+        }
+
+        @keyframes change {
+            0% {
+                content: "Briksy";
+                font-family: "poppins";
+            }
+
+            25% {
+                content: "ब्रिक्सी";
+                font-family: "poppins";
+            }
+
+            50% {
+                content: "ಬ್ರಿಕ್ಸಿ";
+                font-family: "poppins";
+            }
+
+            75% {
+                content: "ப்ரிக்ஸி";
+                font-family: "poppins";
+            }
+
+            100% {
+                content: "ਬ੍ਰਿਕਸੀ";
+                font-family: "poppins";
+            }
+
+        }
+
 
         .nav-links {
             list-style: none;
+            position: relative;
+
         }
 
         .nav-links li {
@@ -58,7 +98,7 @@
 
         .nav-links a {
             text-decoration: none;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 16px;
@@ -67,9 +107,9 @@
 
         .nav-links a.active,
         .nav-links a:hover {
-            background: linear-gradient(90deg,rgb(42, 143, 205),rgb(166, 184, 205));
+            background: linear-gradient(90deg, #e3d4ff, #ffd9e8);
             background-clip: text;
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
         }
 
 
@@ -79,26 +119,27 @@
             margin-top: 30px;
             border-radius: 10px;
         }
-        
+
         .search-container {
-            display: flex; 
+            display: flex;
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .search-container input[type="text"] {
-            flex-grow: 1; 
+            flex-grow: 1;
             padding: 15px;
             border: 1px solid #444;
-            border-radius: 5px 0 0 5px; 
+            border-radius: 5px 0 0 5px;
             background-color: #2a2a2a;
             color: #e0e0e0;
             font-size: 16px;
-            outline: none; 
+            outline: none;
             box-shadow: 5px 7px black;
         }
-        .search-container:hover{
+
+        .search-container:hover {
             transform: scale(1.1);
             transition: 0.5s ease;
         }
@@ -106,7 +147,7 @@
         .search-container button {
             padding: 15px 30px;
             border: none;
-            border-radius: 0 5px 5px 0; 
+            border-radius: 0 5px 5px 0;
             background: linear-gradient(45deg, #007BFF, #6F00FF);
             color: #ffffff;
             font-size: 16px;
@@ -114,13 +155,13 @@
             cursor: pointer;
             box-shadow: 5px 7px black;
         }
-        
+
         .search-container button:hover {
             opacity: 0.85;
         }
 
 
-       
+
         .all-properties {
             padding: 60px 0;
         }
@@ -132,14 +173,14 @@
             color: #ffffff;
         }
 
-        
+
         .property-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-    
+
         .property-card {
             background-color: #2a2a2a;
             border-radius: 10px;
@@ -147,13 +188,14 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             box-shadow: 10px 14px black;
         }
-        .property-card:hover{
+
+        .property-card:hover {
             transform: scale(1.08);
             transition: 0.78s ease;
             border: 1px solid blue;
 
         }
-        
+
         .property-image-placeholder {
             height: 220px;
             background-color: #444;
@@ -210,7 +252,7 @@
             opacity: 0.85;
         }
 
-    
+
         .footer {
             text-align: center;
             padding: 30px 0;
@@ -223,8 +265,8 @@
             color: #888;
         }
 
-    
-        
+
+
         @media (max-width: 992px) {
             .property-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -249,19 +291,21 @@
             }
 
             .search-container {
-                flex-direction: column; 
+                flex-direction: column;
             }
+
             .search-container input[type="text"] {
-                border-radius: 5px; 
+                border-radius: 5px;
                 margin-bottom: 10px;
             }
+
             .search-container button {
-                border-radius: 5px; 
+                border-radius: 5px;
             }
         }
-
     </style>
 </head>
+
 <body>
 
     <header class="header">
@@ -282,7 +326,7 @@
     </header>
 
     <main>
-        
+
 
         <section class="search-section">
             <div class="container">
@@ -313,7 +357,7 @@
                         </div>
                     </div>
 
- 
+
                     <div class="property-card">
                         <div class="property-image-placeholder">
                             <img width="100%" height="100%" src="/Briksy/images/download-8.jpeg" alt="">
@@ -342,7 +386,8 @@
 
                     <div class="property-card">
                         <div class="property-image-placeholder">
-                            <img width="100%" src="/Briksy/images/pg33497-o-2a4dfe1d-b579-4b7d-937b-71a88672b6e2.avif" alt="">
+                            <img width="100%" src="/Briksy/images/pg33497-o-2a4dfe1d-b579-4b7d-937b-71a88672b6e2.avif"
+                                alt="">
                         </div>
                         <div class="property-info">
                             <h4>Furnished 1RK Studio</h4>
@@ -377,7 +422,7 @@
                         </div>
                     </div>
 
-                </div> 
+                </div>
             </div>
         </section>
 
@@ -391,4 +436,5 @@
     </footer>
 
 </body>
+
 </html>

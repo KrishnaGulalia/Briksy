@@ -39,15 +39,55 @@
         }
 
         .logo {
+
             font-size: 28px;
             font-weight: bold;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            cursor: pointer;
+
+
         }
+
+        .logo:after {
+            content: "";
+            animation: change 5s linear infinite;
+        }
+
+        @keyframes change {
+            0% {
+                content: "Briksy";
+                font-family: "poppins";
+            }
+
+            25% {
+                content: "ब्रिक्सी";
+                font-family: "poppins";
+            }
+
+            50% {
+                content: "ಬ್ರಿಕ್ಸಿ";
+                font-family: "poppins";
+            }
+
+            75% {
+                content: "ப்ரிக்ஸி";
+                font-family: "poppins";
+            }
+
+            100% {
+                content: "ਬ੍ਰਿਕਸੀ";
+                font-family: "poppins";
+            }
+
+        }
+
 
         .nav-links {
             list-style: none;
+            position: relative;
+
         }
 
         .nav-links li {
@@ -57,7 +97,7 @@
 
         .nav-links a {
             text-decoration: none;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 16px;
@@ -66,9 +106,9 @@
 
         .nav-links a.active,
         .nav-links a:hover {
-            background: linear-gradient(90deg,rgb(42, 143, 205),rgb(166, 184, 205));
+            background: linear-gradient(90deg, #e3d4ff, #ffd9e8);
             background-clip: text;
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
         }
 
         .page-hero {
@@ -115,9 +155,10 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             text-align: center;
-            
+
         }
-        .service-card:hover{
+
+        .service-card:hover {
             border: 1px solid rgb(48, 95, 223);
             box-shadow: 10px 14px black;
             transition: 0.2s ease;
@@ -159,7 +200,7 @@
         @media (max-width: 992px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
-              
+
             }
         }
 
@@ -178,7 +219,7 @@
 
             .services-grid {
                 grid-template-columns: 1fr;
-               
+
             }
 
             .page-hero h2 {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Briksy - Contact Us</title>
 
     <style>
-  
         * {
             margin: 0;
             padding: 0;
@@ -26,31 +26,71 @@
             margin: 0 auto;
         }
 
-   
+
         .header {
             background-color: #1e1e1e;
             padding: 20px 0;
             border-bottom: 1px solid #333;
-            
+
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+
         }
 
         .logo {
+
             font-size: 28px;
             font-weight: bold;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            cursor: pointer;
+
+
         }
+
+        .logo:after {
+            content: "";
+            animation: change 5s linear infinite;
+        }
+
+        @keyframes change {
+            0% {
+                content: "Briksy";
+                font-family: "poppins";
+            }
+
+            25% {
+                content: "ब्रिक्सी";
+                font-family: "poppins";
+            }
+
+            50% {
+                content: "ಬ್ರಿಕ್ಸಿ";
+                font-family: "poppins";
+            }
+
+            75% {
+                content: "ப்ரிக்ஸி";
+                font-family: "poppins";
+            }
+
+            100% {
+                content: "ਬ੍ਰਿਕਸੀ";
+                font-family: "poppins";
+            }
+
+        }
+
 
         .nav-links {
             list-style: none;
+            position: relative;
+
         }
 
         .nav-links li {
@@ -60,7 +100,7 @@
 
         .nav-links a {
             text-decoration: none;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 16px;
@@ -69,12 +109,12 @@
 
         .nav-links a.active,
         .nav-links a:hover {
-            background: linear-gradient(90deg,rgb(42, 143, 205),rgb(166, 184, 205));
+            background: linear-gradient(90deg, #e3d4ff, #ffd9e8);
             background-clip: text;
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
         }
 
-    
+
         .page-hero {
             text-align: center;
             padding: 60px 20px;
@@ -96,15 +136,15 @@
             margin: 0 auto;
         }
 
-        
+
         .contact-section {
             padding: 60px 0;
         }
 
-      
+
         .contact-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr; 
+            grid-template-columns: 2fr 1fr;
             gap: 40px;
             background-color: #1e1e1e;
             padding: 40px;
@@ -112,14 +152,14 @@
             box-shadow: 5px 7px black;
         }
 
- 
+
         .contact-form h3 {
             font-size: 24px;
             color: #ffffff;
             margin-bottom: 30px;
 
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
@@ -143,12 +183,12 @@
             outline: none;
             box-shadow: 5px 7px black;
         }
-        
+
         .form-group textarea {
-            min-height: 150px; 
-            resize: vertical; 
+            min-height: 150px;
+            resize: vertical;
         }
-        
+
         .form-btn {
             display: inline-block;
             text-decoration: none;
@@ -162,7 +202,7 @@
             background: linear-gradient(45deg, #007BFF, #6F00FF);
             box-shadow: 5px 7px black;
         }
-        
+
         .form-btn:hover {
             opacity: 0.85;
         }
@@ -174,20 +214,20 @@
             border-radius: 10px;
             box-shadow: 5px 7px black;
         }
-        
+
         .contact-info h3 {
             font-size: 24px;
             color: #ffffff;
             margin-bottom: 30px;
         }
-        
+
         .contact-info-item {
             margin-bottom: 25px;
         }
 
         .contact-info-item h5 {
             font-size: 14px;
-            color: #007BFF; 
+            color: #007BFF;
             margin-bottom: 5px;
             text-transform: uppercase;
         }
@@ -198,7 +238,7 @@
         }
 
 
-        
+
         .footer {
             text-align: center;
             padding: 30px 0;
@@ -214,7 +254,7 @@
 
         @media (max-width: 992px) {
             .contact-grid {
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr;
             }
         }
 
@@ -230,17 +270,18 @@
             .nav-links li {
                 margin: 0 10px;
             }
-            
+
             .page-hero h2 {
                 font-size: 32px;
             }
-            
+
             .contact-grid {
                 padding: 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
 
@@ -263,7 +304,7 @@
 
 
     <main>
-   
+
         <section class="page-hero">
             <div class="container">
                 <h2>Get In Touch</h2>
@@ -274,11 +315,11 @@
             </div>
         </section>
 
-   
+
         <section class="contact-section">
             <div class="container">
                 <div class="contact-grid">
-                
+
                     <div class="contact-form">
                         <h3>Send Us a Message</h3>
                         <form>
@@ -301,21 +342,21 @@
                             <button type="submit" class="form-btn">Send Message</button>
                         </form>
                     </div>
-                    
-        
+
+
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        
+
                         <div class="contact-info-item">
                             <h5>Email Us</h5>
                             <p>krishnagulalia@icloud.com</p>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <h5>Call Us</h5>
                             <p>+91 7006619604</p>
                         </div>
-                        
+
                         <div class="contact-info-item">
                             <h5>Find Us</h5>
                             <p>
@@ -325,8 +366,8 @@
                         </div>
 
                     </div>
-                
-                </div> 
+
+                </div>
             </div>
         </section>
 
@@ -339,4 +380,5 @@
     </footer>
 
 </body>
+
 </html>

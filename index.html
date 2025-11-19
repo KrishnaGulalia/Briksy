@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Briksy - Find Your Home, No Brokerage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -21,21 +32,21 @@
 
         .container {
             width: 90%;
-            max-width: 1200px; 
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-  
+
         .header {
-            background-color: #1e1e1e; 
+            background-color: #1e1e1e;
             padding: 20px 0;
-            border-bottom: 1px solid #333; 
-            
+            border-bottom: 1px solid #333;
+
         }
 
         .navbar {
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -43,45 +54,78 @@
 
             font-size: 28px;
             font-weight: bold;
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-             
-    
+            cursor: pointer;
+
+
         }
 
+        .logo:after {
+            content: "";
+            animation: change 5s linear infinite;
+        }
+
+        @keyframes change {
+            0% {
+                content: "Briksy";
+                font-family: "poppins";
+            }
+
+            25% {
+                content: "ब्रिक्सी";
+                font-family: "poppins";
+            }
+            50% {
+                content: "ಬ್ರಿಕ್ಸಿ";
+                font-family: "poppins";
+            }
+            75%{
+                content: "ப்ரிக்ஸி";
+                font-family: "poppins";
+            }
+            100%{
+                content:"ਬ੍ਰਿਕਸੀ";
+                font-family: "poppins";
+            }
+
+        }
+
+
         .nav-links {
-            list-style: none; 
+            list-style: none;
             position: relative;
-            
+
         }
 
         .nav-links li {
             display: inline-block;
-            margin-left: 30px; 
+            margin-left: 30px;
         }
 
         .nav-links a {
-            text-decoration: none; 
-            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            text-decoration: none;
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 16px;
             font-weight: bold;
         }
-      
+
         .nav-links a.active,
         .nav-links a:hover {
-            background: linear-gradient(90deg,rgb(42, 143, 205),rgb(166, 184, 205));
+            background: linear-gradient(90deg, #e3d4ff, #ffd9e8);
             background-clip: text;
-            -webkit-text-fill-color: transparent; 
+            -webkit-text-fill-color: transparent;
         }
 
- 
+
         .hero {
             height: 700px;
             background-image: url(https://i.pinimg.com/1200x/2e/47/95/2e4795b80f7fa179c8b1f75e9999628d.jpg);
             background-size: cover;
+            background-blend-mode: overlay;
             background-repeat: no-repeat;
             text-align: center;
 
@@ -94,12 +138,16 @@
         .hero h2 {
             font-size: 42px;
             margin-bottom: 20px;
-            color: #ffffff;
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: 18px;
-            color: #5a5353;
+            font-size: 20px;
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -118,27 +166,28 @@
 
         .property-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
 
         .property-card {
-            background-color: #2a2a2a; 
+            background-color: #2a2a2a;
             border-radius: 10px;
-            overflow: hidden; 
+            overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             box-shadow: 10px 14px black;
         }
-        .property-card:hover{
+
+        .property-card:hover {
             transform: scale(1.069);
             transition: 0.2s ease-in;
         }
-        
- 
+
+
         .property-image-placeholder {
             height: 220px;
-            background-color: #444; 
+            background-color: #444;
             background-size: cover;
             background-position: center;
             display: flex;
@@ -173,7 +222,7 @@
         .property-info .price {
             font-size: 20px;
             font-weight: bold;
-            color: #009BFF; 
+            color: #009BFF;
             margin-bottom: 20px;
         }
 
@@ -189,7 +238,7 @@
         }
 
         .btn-details:hover {
-            opacity: 0.85; 
+            opacity: 0.85;
         }
 
 
@@ -223,7 +272,7 @@
             }
 
             .nav-links li {
-                margin: 0 10px; 
+                margin: 0 10px;
             }
 
             .property-grid {
@@ -234,14 +283,14 @@
                 font-size: 32px;
             }
         }
-
     </style>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
             <div class="navbar">
-                <div class="logo"><a href="index.html">Briksy</a></div>
+                <div class="logo"><a href="index.html"></a></div>
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html" class="active">Home</a></li>
@@ -260,9 +309,8 @@
             <div class="container">
                 <h2>Your Next Home is Here. No Brokerage.</h2>
                 <p>
-                    Welcome to Briksy. We connect you directly with owners, 
-                    saving you thousands in brokerage fees. Find, visit, and 
-                    rent your perfect home, hassle-free.
+                    Welcome to Briksy. We connect you directly with owners,
+                    saving you thousands in brokerage fees.
                 </p>
             </div>
         </section>
@@ -272,7 +320,9 @@
                 <div class="property-grid">
                     <div class="property-card">
                         <div class="property-image-placeholder">
-                            <img width="100%" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/559741199.jpg?k=acadf5adfc76475abb0c1a74ac5586b0bb7ee57cddff1c2935f145ccf3fe5545&o=" alt="">
+                            <img width="100%"
+                                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/559741199.jpg?k=acadf5adfc76475abb0c1a74ac5586b0bb7ee57cddff1c2935f145ccf3fe5545&o="
+                                alt="">
                         </div>
                         <div class="property-info">
                             <h4>Spacious 2BHK Apartment</h4>
@@ -320,4 +370,5 @@
     </footer>
 
 </body>
+
 </html>

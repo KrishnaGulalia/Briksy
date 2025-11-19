@@ -43,7 +43,10 @@
 
             font-size: 28px;
             font-weight: bold;
-            color:#1807ff;
+            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+             
     
         }
 
@@ -60,21 +63,30 @@
 
         .nav-links a {
             text-decoration: none; 
-            color: #e0e0e0;
+            background: linear-gradient(90deg,rgb(180, 102, 65),wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-size: 16px;
             font-weight: bold;
         }
       
         .nav-links a.active,
         .nav-links a:hover {
-            color: #007BFF; 
+            background: linear-gradient(90deg,rgb(42, 143, 205),rgb(166, 184, 205));
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
         }
 
  
         .hero {
+            height: 700px;
+            background-image: url(https://i.pinimg.com/1200x/2e/47/95/2e4795b80f7fa179c8b1f75e9999628d.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
             text-align: center;
+
             padding: 80px 20px;
-            background-color: #1e1e1e;
+            background-color: #242121;
             border-radius: 10px;
             margin-top: 30px;
         }
@@ -87,7 +99,7 @@
 
         .hero p {
             font-size: 18px;
-            color: #b0b0b0;
+            color: #5a5353;
             max-width: 600px;
             margin: 0 auto;
         }

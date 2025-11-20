@@ -64,7 +64,8 @@
             content: "";
             animation: change 5s linear infinite;
         }
-        .logo:hover::after{
+
+        .logo:hover::after {
             animation-play-state: paused;
         }
 
@@ -129,7 +130,7 @@
             padding: 60px 20px;
             background-color: #1e1e1e;
             border-radius: 10px;
-    
+
         }
 
         .page-hero h2 {
@@ -198,15 +199,80 @@
 
 
         .footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 40px;
-            background-color: #1e1e1e;
-            border-top: 1px solid #333;
+            background: #1a1a1a;
+            border-top: 1px solid #2e2e2e;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
         }
 
-        .footer p {
+        .footer-wrapper {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-brand {
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .footer-heading {
+            font-size: 16px;
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .footer-text {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .footer-text.small {
+            font-size: 14px;
             color: #888;
+        }
+
+        .footer-col ul li {
+            list-style: none;
+            margin: 8px 0;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #bbb;
+            transition: 0.25s;
+        }
+
+        .footer-col ul li a:hover {
+            background: linear-gradient(90deg, rgb(180, 102, 65), wheat);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-guidelines li {
+            color: #888;
+            margin: 6px 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            margin-top: 40px;
+            border-top: 1px solid #272727;
+        }
+
+        .footer-bottom p {
+            color: #666;
+            font-size: 14px;
         }
 
 
@@ -350,10 +416,51 @@
 
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Briksy. All rights reserved. Find your home without the fees.</p>
+        <div class="footer-wrapper">
+
+            <div class="footer-col">
+                <h3 class="footer-brand">Briksy</h3>
+                <p class="footer-text">
+                    Find your next home directly from owners - no brokerage, no hidden fees.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Browse</h4>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/properties.html">Properties</a></li>
+                    <li><a href="/login.html">Login</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Guidelines</h4>
+                <ul class="footer-guidelines">
+                    <li>Transparent Listings</li>
+                    <li>No Brokerage</li>
+                    <li>Verified Owners</li>
+                    <li>Direct Negotiation</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">About</h4>
+                <p class="footer-text small">
+                    Built for clarity and trust.
+                    Designed to make home-search simple.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Briksy — All rights reserved.</p>
         </div>
     </footer>
+
 
 </body>
 

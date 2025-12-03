@@ -568,7 +568,19 @@
             <p>© 2025 Briksy — All rights reserved.</p>
         </div>
     </footer>
-
+    <script>
+        const modal = document.getElementById('propertyModal');
+        const titleElement = document.getElementById('modalTitle');
+        const infoElement = document.getElementById('modalInfo');
+        function openDetails(title, details) {
+            titleElement.innerText = title;
+            infoElement.innerText = details;
+            modal.style.display = 'flex';
+        }
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+    </script>
 
 </body>
 
